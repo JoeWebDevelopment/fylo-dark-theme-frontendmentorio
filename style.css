@@ -46,7 +46,7 @@ body{
 header{
     width: 100%;
 }
-nav{
+.primary-nav{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -208,7 +208,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3.5rem;
+    gap: 5rem;
     align-items: center;
 }
 
@@ -508,6 +508,7 @@ footer svg{
 }
 
 .footer-nav{
+    display: flex;
     flex-direction: row;
     gap: 88px;
 }
@@ -518,6 +519,11 @@ footer svg{
     list-style-type: none;
     gap: 1rem;
 
+}
+
+.footer-link{
+    color: white;
+    text-decoration: none;
 }
 
 .social-link{
