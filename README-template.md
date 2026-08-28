@@ -1,6 +1,6 @@
 # Frontend Mentor - Fylo dark theme landing page solution
 
-This is a solution to the [Fylo dark theme landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution to the [Fylo dark theme landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd). Frontend Mentor challenges help developers improve their coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -13,11 +13,8 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
+  - [AI collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -26,24 +23,20 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
 Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- See hover and focus states for interactive elements
+- Submit an email address through the early-access form
+- Receive accessible feedback when the email address is invalid
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot of the completed Fylo landing page](/Screenshot%202026-08-28%20125332.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+> Add the final project screenshot as `screenshot.jpg` before publishing the solution.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add the Frontend Mentor solution URL after submission](https://github.com/JoeWebDevelopment/fylo-dark-theme-frontendmentorio)
+- Live Site URL: [Add the deployed site URL](https://nimble-hotteok-5724f7.netlify.app/)
 
 ## My process
 
@@ -53,70 +46,42 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CSS nesting
+- Desktop-first responsive workflow
+- JavaScript
+- Constraint Validation API
+- Accessible form feedback and ARIA attributes
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Through trial and error, I improved my understanding of responsive layouts and fluid sizing. I used AI primarily for debugging guidance, while using browser DevTools and computed styles to trace layout problems myself. The completed layout now adjusts fluidly between desktop, tablet, and mobile screen sizes.
 
-To see how you can add code snippets, see below:
+The most difficult part was positioning the curved hero background. I initially overcomplicated the problem and applied the background to the wrong section, which caused unexpected spacing and sizing issues. After experimenting with several approaches, I placed the background on the parent hero section and added the necessary spacing to its inner content. This helped me better understand how a parent's background and a child's spacing can work together without changing the size of the entire section.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+I also learned that horizontal overflow may come from one oversized child, such as an image, even when several containers appear too wide. Inspecting computed widths from the outside inward helped me locate the actual source of the problem.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+While adding the early-access form, I learned how to use the browser's built-in email validation through `checkValidity()`. I also practiced connecting validation feedback to the input with `aria-describedby`, announcing status changes with `aria-live`, and communicating an invalid state with `aria-invalid`.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+In future projects, I want to become faster at identifying the element responsible for overflow and more confident when combining `width`, `max-width`, and responsive images. I also want to continue testing layouts throughout the full range between breakpoints rather than checking only a few standard device sizes.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Although I currently find desktop-first development more comfortable, I would also like to practice mobile-first workflows so I can better understand the benefits and tradeoffs of both approaches. I also plan to keep improving my understanding of accessible forms and validation feedback.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Figma](https://www.figma.com/) - I used the supplied design to inspect dimensions, spacing, typography, and the intended responsive layouts.
+- [MDN Web Docs](https://developer.mozilla.org/) - I used MDN to research HTML, CSS, form validation, and accessibility features.
+- Google searches - I used Google to find documentation and investigate unfamiliar CSS behavior.
+- AI mentoring - I used AI for debugging guidance, code reviews, accessibility feedback, and explanations of unfamiliar concepts.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+### AI collaboration
 
-### AI Collaboration
+I used AI as a debugging and mentoring tool rather than having it build the project for me. It helped me identify areas to investigate, understand computed layout values, review accessibility, and reason through responsive sizing problems. I implemented and tested the solutions myself through trial and error.
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+The most helpful approach was combining AI guidance with browser DevTools. AI could suggest likely causes, while computed styles and viewport testing allowed me to confirm which element was actually creating the problem. This process helped me understand the solution instead of only applying a suggested change.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor: [Add your Frontend Mentor profile URL](https://www.frontendmentor.io/profile/JoeWebDevelopment)
+- GitHub: [Add your GitHub profile or repository URL](https://github.com/JoeWebDevelopment)
