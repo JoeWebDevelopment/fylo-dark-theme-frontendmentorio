@@ -399,6 +399,10 @@ letter-spacing: 0.571px;
 
 }
 
+input::placeholder{
+    color: var(--clr-gray)
+}
+
 form{
     display: flex;
     flex-direction: row;
